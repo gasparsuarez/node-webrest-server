@@ -25,10 +25,10 @@ export class Server {
 
     async start(){
 
-        // * MiddleWare -> Se ejecuta sólo y antes de la primer petición
-        
+        // * MiddleWare
         // * Convierte el body de la petición a JSON 
-        this.app.use( express.json() )
+        this.app.use( express.json() );
+
         // * Public Folder 
         this.app.use( express.static( this.publicPath ) );
 
